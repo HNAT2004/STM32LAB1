@@ -54,7 +54,20 @@ static void MX_GPIO_Init(void);
 
 /* Private user code ---------------------------------------------------------*/
 /* USER CODE BEGIN 0 */
-
+void clearAllClock(){
+	HAL_GPIO_WritePin(LED_0_GPIO_Port, LED_0_Pin, SET);
+	HAL_GPIO_WritePin(LED_1_GPIO_Port, LED_1_Pin, SET);
+	HAL_GPIO_WritePin(LED_2_GPIO_Port, LED_2_Pin, SET);
+	HAL_GPIO_WritePin(LED_3_GPIO_Port, LED_3_Pin, SET);
+	HAL_GPIO_WritePin(LED_4_GPIO_Port, LED_4_Pin, SET);
+	HAL_GPIO_WritePin(LED_5_GPIO_Port, LED_5_Pin, SET);
+	HAL_GPIO_WritePin(LED_6_GPIO_Port, LED_6_Pin, SET);
+	HAL_GPIO_WritePin(LED_7_GPIO_Port, LED_7_Pin, SET);
+	HAL_GPIO_WritePin(LED_8_GPIO_Port, LED_8_Pin, SET);
+	HAL_GPIO_WritePin(LED_9_GPIO_Port, LED_9_Pin, SET);
+	HAL_GPIO_WritePin(LED_10_GPIO_Port, LED_10_Pin, SET);
+	HAL_GPIO_WritePin(LED_11_GPIO_Port, LED_11_Pin, SET);
+}
 /* USER CODE END 0 */
 
 /**
@@ -96,28 +109,19 @@ int main(void)
     /* USER CODE END WHILE */
 	  HAL_Delay(1000);
 	  HAL_GPIO_TogglePin(LED_0_GPIO_Port, LED_0_Pin);
-	  HAL_Delay(1000);
 	  HAL_GPIO_TogglePin(LED_1_GPIO_Port, LED_1_Pin);
-	  HAL_Delay(1000);
 	  HAL_GPIO_TogglePin(LED_2_GPIO_Port, LED_2_Pin);
-	  HAL_Delay(1000);
 	  HAL_GPIO_TogglePin(LED_3_GPIO_Port, LED_3_Pin);
-	  HAL_Delay(1000);
 	  HAL_GPIO_TogglePin(LED_4_GPIO_Port, LED_4_Pin);
-	  HAL_Delay(1000);
 	  HAL_GPIO_TogglePin(LED_5_GPIO_Port, LED_5_Pin);
-	  HAL_Delay(1000);
 	  HAL_GPIO_TogglePin(LED_6_GPIO_Port, LED_6_Pin);
-	  HAL_Delay(1000);
 	  HAL_GPIO_TogglePin(LED_7_GPIO_Port, LED_7_Pin);
-	  HAL_Delay(1000);
 	  HAL_GPIO_TogglePin(LED_8_GPIO_Port, LED_8_Pin);
-	  HAL_Delay(1000);
 	  HAL_GPIO_TogglePin(LED_9_GPIO_Port, LED_9_Pin);
-	  HAL_Delay(1000);
 	  HAL_GPIO_TogglePin(LED_10_GPIO_Port, LED_10_Pin);
-	  HAL_Delay(1000);
 	  HAL_GPIO_TogglePin(LED_11_GPIO_Port, LED_11_Pin);
+	  HAL_Delay(1000);
+	  clearAllClock();
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
