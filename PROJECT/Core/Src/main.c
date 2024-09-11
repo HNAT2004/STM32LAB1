@@ -91,60 +91,33 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  int change = 0;
   while (1)
   {
     /* USER CODE END WHILE */
-  	  switch(change){
-  	  case 0:
-  		HAL_GPIO_WritePin(RED_1_GPIO_Port, RED_1_Pin, RESET);
-  		HAL_GPIO_WritePin(RED_1_OPPO_GPIO_Port, RED_1_OPPO_Pin, RESET);
-  		HAL_GPIO_WritePin(YELLOW_1_GPIO_Port, YELLOW_1_Pin, SET);
-  		HAL_GPIO_WritePin(YELLOW_1_OPPO_GPIO_Port, YELLOW_1_OPPO_Pin, SET);
-  		HAL_GPIO_WritePin(GREEN_1_GPIO_Port, GREEN_1_Pin, SET);
-  		HAL_GPIO_WritePin(GREEN_1_OPPO_GPIO_Port, GREEN_1_OPPO_Pin, SET);
-
-  		HAL_GPIO_WritePin(GREEN_2_GPIO_Port, GREEN_2_Pin, RESET);
-  		HAL_GPIO_WritePin(GREEN_2_OPPO_GPIO_Port, GREEN_2_OPPO_Pin, RESET);
-  		HAL_GPIO_WritePin(YELLOW_2_GPIO_Port, YELLOW_2_Pin, SET);
-  		HAL_GPIO_WritePin(YELLOW_2_OPPO_GPIO_Port, YELLOW_2_OPPO_Pin, SET);
-  		HAL_GPIO_WritePin(RED_2_GPIO_Port, RED_2_Pin, SET);
-  		HAL_GPIO_WritePin(RED_2_OPPO_GPIO_Port, RED_2_OPPO_Pin, SET);
-  		HAL_Delay(3000);
-  		HAL_GPIO_WritePin(GREEN_2_GPIO_Port, GREEN_2_Pin, SET);
-  		HAL_GPIO_WritePin(GREEN_2_OPPO_GPIO_Port, GREEN_2_OPPO_Pin, SET);
-  		HAL_GPIO_WritePin(YELLOW_2_GPIO_Port, YELLOW_2_Pin, RESET);
-  		HAL_GPIO_WritePin(YELLOW_2_OPPO_GPIO_Port, YELLOW_2_OPPO_Pin, RESET);
-  		HAL_GPIO_WritePin(RED_2_GPIO_Port, RED_2_Pin, SET);
-  		HAL_GPIO_WritePin(RED_2_OPPO_GPIO_Port, RED_2_OPPO_Pin, SET);
-  		HAL_Delay(2000);
-  		change = (change + 1) % 2;
-  		break;
-  	  case 1:
-  		HAL_GPIO_WritePin(RED_2_GPIO_Port, RED_2_Pin, RESET);
-  		HAL_GPIO_WritePin(RED_2_OPPO_GPIO_Port, RED_2_OPPO_Pin, RESET);
-  		HAL_GPIO_WritePin(YELLOW_2_GPIO_Port, YELLOW_2_Pin, SET);
-  		HAL_GPIO_WritePin(YELLOW_2_OPPO_GPIO_Port, YELLOW_2_OPPO_Pin, SET);
-  		HAL_GPIO_WritePin(GREEN_2_GPIO_Port, GREEN_2_Pin, SET);
-  		HAL_GPIO_WritePin(GREEN_2_OPPO_GPIO_Port, GREEN_2_OPPO_Pin, SET);
-
-  		HAL_GPIO_WritePin(GREEN_1_GPIO_Port, GREEN_1_Pin, RESET);
-  		HAL_GPIO_WritePin(GREEN_1_OPPO_GPIO_Port, GREEN_1_OPPO_Pin, RESET);
-  		HAL_GPIO_WritePin(YELLOW_1_GPIO_Port, YELLOW_1_Pin, SET);
-  		HAL_GPIO_WritePin(YELLOW_1_OPPO_GPIO_Port, YELLOW_1_OPPO_Pin, SET);
-  		HAL_GPIO_WritePin(RED_1_GPIO_Port, RED_1_Pin, SET);
-  		HAL_GPIO_WritePin(RED_1_OPPO_GPIO_Port, RED_1_OPPO_Pin, SET);
-  		HAL_Delay(3000);
-  		HAL_GPIO_WritePin(GREEN_1_GPIO_Port, GREEN_1_Pin, SET);
-  		HAL_GPIO_WritePin(GREEN_1_OPPO_GPIO_Port, GREEN_1_OPPO_Pin, SET);
-  		HAL_GPIO_WritePin(YELLOW_1_GPIO_Port, YELLOW_1_Pin, RESET);
-  		HAL_GPIO_WritePin(YELLOW_1_OPPO_GPIO_Port, YELLOW_1_OPPO_Pin, RESET);
-  		HAL_GPIO_WritePin(RED_1_GPIO_Port, RED_1_Pin, SET);
-  		HAL_GPIO_WritePin(RED_1_OPPO_GPIO_Port, RED_1_OPPO_Pin, SET);
-  		HAL_Delay(2000);
-  		change = (change + 1) % 2;
-  	  	break;
-  	  }
+	  HAL_Delay(1000);
+	  HAL_GPIO_TogglePin(LED_0_GPIO_Port, LED_0_Pin);
+	  HAL_Delay(1000);
+	  HAL_GPIO_TogglePin(LED_1_GPIO_Port, LED_1_Pin);
+	  HAL_Delay(1000);
+	  HAL_GPIO_TogglePin(LED_2_GPIO_Port, LED_2_Pin);
+	  HAL_Delay(1000);
+	  HAL_GPIO_TogglePin(LED_3_GPIO_Port, LED_3_Pin);
+	  HAL_Delay(1000);
+	  HAL_GPIO_TogglePin(LED_4_GPIO_Port, LED_4_Pin);
+	  HAL_Delay(1000);
+	  HAL_GPIO_TogglePin(LED_5_GPIO_Port, LED_5_Pin);
+	  HAL_Delay(1000);
+	  HAL_GPIO_TogglePin(LED_6_GPIO_Port, LED_6_Pin);
+	  HAL_Delay(1000);
+	  HAL_GPIO_TogglePin(LED_7_GPIO_Port, LED_7_Pin);
+	  HAL_Delay(1000);
+	  HAL_GPIO_TogglePin(LED_8_GPIO_Port, LED_8_Pin);
+	  HAL_Delay(1000);
+	  HAL_GPIO_TogglePin(LED_9_GPIO_Port, LED_9_Pin);
+	  HAL_Delay(1000);
+	  HAL_GPIO_TogglePin(LED_10_GPIO_Port, LED_10_Pin);
+	  HAL_Delay(1000);
+	  HAL_GPIO_TogglePin(LED_11_GPIO_Port, LED_11_Pin);
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
@@ -195,23 +168,23 @@ static void MX_GPIO_Init(void)
   GPIO_InitTypeDef GPIO_InitStruct = {0};
 
   /* GPIO Ports Clock Enable */
-  __HAL_RCC_GPIOB_CLK_ENABLE();
+  __HAL_RCC_GPIOA_CLK_ENABLE();
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, RED_1_Pin|YELLOW_1_Pin|GREEN_1_Pin|YELLOW_2_OPPO_Pin
-                          |GREEN_2_OPPO_Pin|RED_1_OPPO_Pin|YELLOW_1_OPPO_Pin|GREEN_1_OPPO_Pin
-                          |RED_2_Pin|YELLOW_2_Pin|GREEN_2_Pin|RED_2_OPPO_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOA, LED_0_Pin|LED_1_Pin|LED_2_Pin|LED_3_Pin
+                          |LED_4_Pin|LED_5_Pin|LED_6_Pin|LED_7_Pin
+                          |LED_8_Pin|LED_9_Pin|LED_10_Pin|LED_11_Pin, GPIO_PIN_RESET);
 
-  /*Configure GPIO pins : RED_1_Pin YELLOW_1_Pin GREEN_1_Pin YELLOW_2_OPPO_Pin
-                           GREEN_2_OPPO_Pin RED_1_OPPO_Pin YELLOW_1_OPPO_Pin GREEN_1_OPPO_Pin
-                           RED_2_Pin YELLOW_2_Pin GREEN_2_Pin RED_2_OPPO_Pin */
-  GPIO_InitStruct.Pin = RED_1_Pin|YELLOW_1_Pin|GREEN_1_Pin|YELLOW_2_OPPO_Pin
-                          |GREEN_2_OPPO_Pin|RED_1_OPPO_Pin|YELLOW_1_OPPO_Pin|GREEN_1_OPPO_Pin
-                          |RED_2_Pin|YELLOW_2_Pin|GREEN_2_Pin|RED_2_OPPO_Pin;
+  /*Configure GPIO pins : LED_0_Pin LED_1_Pin LED_2_Pin LED_3_Pin
+                           LED_4_Pin LED_5_Pin LED_6_Pin LED_7_Pin
+                           LED_8_Pin LED_9_Pin LED_10_Pin LED_11_Pin */
+  GPIO_InitStruct.Pin = LED_0_Pin|LED_1_Pin|LED_2_Pin|LED_3_Pin
+                          |LED_4_Pin|LED_5_Pin|LED_6_Pin|LED_7_Pin
+                          |LED_8_Pin|LED_9_Pin|LED_10_Pin|LED_11_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_NOPULL;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+  HAL_GPIO_Init(GPIOA, &GPIO_InitStruct);
 
 }
 
