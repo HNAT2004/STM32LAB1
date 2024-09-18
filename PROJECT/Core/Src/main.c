@@ -194,9 +194,10 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
-	  HAL_Delay(1000);
-	  clearNumberOnClock(4);
-	  clearNumberOnClock(10);
+	  for (int i = 0; i <= 11; i++){
+		  clearNumberOnClock(i);
+		  HAL_Delay(1000);
+	  }
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
