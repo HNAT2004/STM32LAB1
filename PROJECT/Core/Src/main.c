@@ -205,9 +205,10 @@ int main(void)
   /* USER CODE BEGIN 2 */
 
   /* USER CODE END 2 */
-  int hour = 0;
-  int minute = 0;
-  int second = 0;
+  int hour = 2;
+  int minute = 59;
+  int second = 50;
+  setTime(hour, minute, second);
 
   for (int i = 1; i <= 11; i++){
 	  clearNumberOnClock(i);
