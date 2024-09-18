@@ -156,6 +156,12 @@ void setNumberOnClock(int num){
 	}
 }
 
+void setTime(int hour, int minute, int second){
+	setNumberOnClock(hour);
+	setNumberOnClock(minute / 5);
+	setNumberOnClock(second / 12);
+}
+
 void display(int hour, int minute, int second){
 	for (int i = 0; i <= 11; i++){
 		clearNumberOnClock(i);
@@ -211,6 +217,7 @@ int main(void)
   while (1)
   {
     /* USER CODE END WHILE */
+    /* USER CODE BEGIN 3 */
 	  HAL_Delay(1000);
 	  second++;
 	  if (second >= 60){
@@ -225,7 +232,6 @@ int main(void)
 		  }
 	  }
 	  display(hour, minute, second);
-    /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
 }
