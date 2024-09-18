@@ -244,21 +244,21 @@ int main(void)
   /* Initialize all configured peripherals */
   MX_GPIO_Init();
  800024e:	f000 f84d 	bl	80002ec <MX_GPIO_Init>
-  /* Infinite loop */
   /* USER CODE BEGIN WHILE */
   while (1)
   {
     /* USER CODE END WHILE */
+
 	  for (int i = 0; i <= 11; i++){
  8000252:	2300      	movs	r3, #0
  8000254:	607b      	str	r3, [r7, #4]
  8000256:	e009      	b.n	800026c <main+0x2c>
-		  clearNumberOnClock(i);
- 8000258:	6878      	ldr	r0, [r7, #4]
- 800025a:	f7ff ff77 	bl	800014c <clearNumberOnClock>
 		  HAL_Delay(1000);
- 800025e:	f44f 707a 	mov.w	r0, #1000	; 0x3e8
- 8000262:	f000 f965 	bl	8000530 <HAL_Delay>
+ 8000258:	f44f 707a 	mov.w	r0, #1000	; 0x3e8
+ 800025c:	f000 f968 	bl	8000530 <HAL_Delay>
+		  clearNumberOnClock(i);
+ 8000260:	6878      	ldr	r0, [r7, #4]
+ 8000262:	f7ff ff73 	bl	800014c <clearNumberOnClock>
 	  for (int i = 0; i <= 11; i++){
  8000266:	687b      	ldr	r3, [r7, #4]
  8000268:	3301      	adds	r3, #1
