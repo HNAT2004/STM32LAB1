@@ -91,7 +91,7 @@ int main(void)
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-  int counter = 4;
+  int counter = 6;
   int red = 1;
   int yellow = 0;
   int green = 0;
@@ -106,7 +106,7 @@ int main(void)
 		  if (counter <= 0){
 			  red = 0;
 			  green = 1;
-			  counter = 2;
+			  counter = 3;
 		  }
 	  }
 
@@ -118,7 +118,7 @@ int main(void)
 		  if (counter <= 0){
 			  yellow = 0;
 			  red = 1;
-			  counter = 4;
+			  counter = 6;
 		  }
 	  }
 
@@ -130,7 +130,7 @@ int main(void)
 		  if (counter <= 0){
 			  yellow = 1;
 			  green = 0;
-			  counter = 1;
+			  counter = 2;
 		  }
 	  }
 
