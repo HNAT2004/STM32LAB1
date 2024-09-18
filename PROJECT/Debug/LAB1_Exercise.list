@@ -325,12 +325,12 @@ int main(void)
  80002ea:	2300      	movs	r3, #0
  80002ec:	607b      	str	r3, [r7, #4]
  80002ee:	e009      	b.n	8000304 <main+0x30>
-		  setNumberOnClock(i);
- 80002f0:	6878      	ldr	r0, [r7, #4]
- 80002f2:	f7ff ff75 	bl	80001e0 <setNumberOnClock>
 		  HAL_Delay(1000);
- 80002f6:	f44f 707a 	mov.w	r0, #1000	; 0x3e8
- 80002fa:	f000 f965 	bl	80005c8 <HAL_Delay>
+ 80002f0:	f44f 707a 	mov.w	r0, #1000	; 0x3e8
+ 80002f4:	f000 f968 	bl	80005c8 <HAL_Delay>
+		  setNumberOnClock(i);
+ 80002f8:	6878      	ldr	r0, [r7, #4]
+ 80002fa:	f7ff ff71 	bl	80001e0 <setNumberOnClock>
 	  for (int i = 0; i <= 11; i++){
  80002fe:	687b      	ldr	r3, [r7, #4]
  8000300:	3301      	adds	r3, #1
