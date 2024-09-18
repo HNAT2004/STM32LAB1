@@ -152,11 +152,10 @@ int main(void)
   {
     /* USER CODE END WHILE */
 	  clearAllClock();
-	  HAL_Delay(1000);
-	  setNumberOnClock(1);
-	  HAL_Delay(1000);
-	  setNumberOnClock(6);
-	  HAL_Delay(1000);
+	  for (int i = 0; i <= 11; i++){
+		  setNumberOnClock(i);
+		  HAL_Delay(1000);
+	  }
     /* USER CODE BEGIN 3 */
   }
   /* USER CODE END 3 */
